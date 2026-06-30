@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage'
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[url('./src/assets/chatappbg.png')] bg-cover bg-center bg-no-repeat ">
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
