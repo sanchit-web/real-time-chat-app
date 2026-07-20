@@ -91,6 +91,13 @@ const login = async (state, credentials)=>{
         })
     }
 
+     useEffect(()=>{
+        if(token){
+            axios.defaults.headers.common["token"] = token;
+        }
+        checkAuth();
+    },[])
+
 
 
     const value = {
@@ -98,6 +105,9 @@ const login = async (state, credentials)=>{
         authUser,
         onlineUsers,
         socket,
+        login,
+        logout,
+        updateProfile
     }
 
     return (
