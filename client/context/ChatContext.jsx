@@ -26,6 +26,32 @@ export const ChatProvider=({children})=>{
         }
     }
 
+    // function to get messages for selected user
+    const getMessages = async (userId)=>{
+        try {
+            const { data } = await axios.get(`/api/messages/${userId}`);
+            if (data.success){
+                setMessages(data.messages)
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
+    }
+
+    // function to send message to selected user
+    const sendMessage = async (messageData)=>{
+        try {
+            const {data} = await axios.post(`/api/messages/send/${selectedUser._id}`, messageData);
+            if(data.success){
+                setMessages((prevMessages)=>[...prevMessages, data.newMessage])
+            }else{
+                toast.error(data.message);
+            }
+        } catch (error) {
+            toast.error(error.message);
+        }
+    }
+
 
 
     const value={
