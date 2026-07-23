@@ -37,8 +37,9 @@ io.on("connection", (socket)=>{
 })
 
 // Middleware setup
-app.use(express.json({limit: "4mb"}));
 app.use(cors());
+app.use(express.json({limit: "4mb"}));
+
 
 // Routes setup
 app.use("/api/status", (req, res)=> res.send("Server is live"));
