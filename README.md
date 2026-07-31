@@ -4,6 +4,12 @@ A full-stack real-time chat application built using the **MERN Stack** with **So
 
 ---
 
+## 🌐 Live Demo
+
+🚀 Frontend: https://real-time-chat-app-sanchit2.vercel.app/
+
+⚙️ Backend API: https://real-time-chat-app-backend-b4p9.onrender.com/api/status
+
 ## 🚀 Features
 
 ### Authentication
